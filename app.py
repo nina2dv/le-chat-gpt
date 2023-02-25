@@ -23,7 +23,7 @@ if LOGGED_IN == True:
   # Streamlit Application
 
   # st.markdown(st.session_state)
-  st.info(f"##### Hello _{username}_", icon="ℹ️")
+  st.info(f"##### Hello _{username}_", icon="👋")
 
   # st.markdown("""---""")
   # Applications
