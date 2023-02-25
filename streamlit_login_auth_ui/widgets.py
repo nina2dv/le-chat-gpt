@@ -246,7 +246,7 @@ class __login__:
             with del_logout2:
                 # st.markdown(f"# {st.session_state['name']}")
                 st.markdown("""---""")
-                with expander("About me"):
+                with st.expander("About me"):
                   st.write("Meow!")
                   st.write("Ask me anything!")
                   st.markdown(
