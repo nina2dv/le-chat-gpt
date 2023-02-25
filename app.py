@@ -22,21 +22,8 @@ if LOGGED_IN == True:
   
    # Streamlit Application
    # st.markdown(st.session_state)
-   # st.write(username)
-  with st.expander("About me"):
-      st.write("Meow!")
-      st.write("Ask me anything!")
-      st.markdown(
-         """
-         Example Prompts:
-         - What would you do if ...?
-         - There is cat food nearby.
-         - What do you think of ...?
-         """
-      )
+   st.markdown("### Hello " + username)
 
-      st.warning(
-         "Be aware! Some of the most toxic food for cats include onions & garlic, raw eggs & meat, bones, chocolate, caffeinated beverages, raw dough, dairy products, alcohol, grapes and raisins.")
   # st.markdown("""---""")
   # Applications
   app.add_app("Home", home.app)
