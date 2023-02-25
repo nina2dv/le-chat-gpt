@@ -30,7 +30,7 @@ if LOGGED_IN == True:
     # Applications
     app.add_app("Home", home.app)
     app.add_app("History", history.app)
-    app.run()
+  app.run()
 
   # st.markdown("""---""")
   
