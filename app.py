@@ -20,6 +20,8 @@ username= __login__obj.get_username()
 
 if LOGGED_IN == True:
   # Streamlit Application
+  st.session_state['name'] = 'username'
+
   # st.markdown(st.session_state)
   st.markdown(f"##### Hello _{username}_")
 
