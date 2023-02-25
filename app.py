@@ -17,7 +17,7 @@ __login__obj = __login__(auth_token = st.secrets['API'],
 
 LOGGED_IN= __login__obj.build_login_ui()
 username= __login__obj.get_username()
-if name not in st.session_state:
+if "name" not in st.session_state:
   st.session_state['name'] = username
 
 
