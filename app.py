@@ -20,7 +20,7 @@ username= __login__obj.get_username()
 
 if LOGGED_IN == True:
   
-   # st.markdown("Your Streamlit Application Begins here!")
+   # Streamlit Application
    # st.markdown(st.session_state)
    # st.write(username)
   with st.expander("About me"):
@@ -37,8 +37,8 @@ if LOGGED_IN == True:
 
       st.warning(
          "Be aware! Some of the most toxic food for cats include onions & garlic, raw eggs & meat, bones, chocolate, caffeinated beverages, raw dough, dairy products, alcohol, grapes and raisins.")
-  st.markdown("""---""")
-  # Add all your application here
+  # st.markdown("""---""")
+  # Applications
   app.add_app("Home", home.app)
   app.add_app("History", history.app)
   app.run()
