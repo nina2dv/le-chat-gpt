@@ -6,7 +6,7 @@ from apps import home, history
 
 app = MultiPage()
 st.set_page_config(page_title="Le Chat-GPT", page_icon="cat")
-st.header('Le Chat-GPT 🐈')
+st.title('Le Chat-GPT 🐈')
 
 __login__obj = __login__(auth_token = st.secrets['API'],
                     company_name = "Shims",
@@ -19,9 +19,8 @@ LOGGED_IN= __login__obj.build_login_ui()
 username= __login__obj.get_username()
 
 if LOGGED_IN == True:
-  
-   # Streamlit Application
-   # st.markdown(st.session_state)
+  # Streamlit Application
+  # st.markdown(st.session_state)
   st.markdown(f"##### Hello _{username}_")
 
   # st.markdown("""---""")
