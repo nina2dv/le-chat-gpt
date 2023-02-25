@@ -27,7 +27,6 @@ def similarity(list_text):
 
 openai.api_key = st.secrets['open']
 co = cohere.Client(st.secrets['co'])
-progress_text = "Operation in progress. Please wait."
 
 def app():
     
@@ -39,13 +38,9 @@ def app():
 
    if submit_button:
        output_text = gen(search)
-       # with st.spinner('Wait for it...'):
-            # time.sleep(5)
-       my_bar = st.progress(0, text=progress_text)
+       with st.spinner('Wait for it...'):
+            time.sleep(5)
 
-       for percent_complete in range(100):
-           time.sleep(0.1)
-           my_bar.progress(percent_complete + 1, text=progress_text)
        st.info(output_text)
        st.session_state['key'].append({search: output_text})
        # st.write(f"Embeddings: {similarity(st.session_state['key'])}")
