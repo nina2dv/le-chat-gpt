@@ -240,7 +240,7 @@ class __login__:
             del_logout.markdown("#")
             
             if 'key' not in st.session_state:
-                st.session_state['key'] = [{st.session_state['name'] + " 👤": "Le Chat 🐱"}]
+                st.session_state['key'] = [{f"{st.session_state['name']} 👤": "Le Chat 🐱"}]
             
             logout_click_check = del_logout.button(self.logout_button_name)
             with del_logout2.expander("About me"):
