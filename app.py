@@ -23,13 +23,11 @@ if LOGGED_IN == True:
   # Streamlit Application
 
   # st.markdown(st.session_state)
-  col1, col2 = st.columns(2)
-  with col1:
-    st.info(f"##### Hello _{username}_", icon="👋")
-  with col2:
-    # Applications
-    app.add_app("Home", home.app)
-    app.add_app("History", history.app)
+  st.info(f"##### Hello _{username}_", icon="👋")
+
+  # Applications
+  app.add_app("Home", home.app)
+  app.add_app("History", history.app)
   app.run()
 
   # st.markdown("""---""")
