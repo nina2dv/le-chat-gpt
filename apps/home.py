@@ -1,6 +1,7 @@
 import cohere
 import openai
 import streamlit as st
+import time
 
 def gen(prompt):
     response = co.generate(
@@ -37,6 +38,8 @@ def app():
 
    if submit_button:
        output_text = gen(search)
+       with st.spinner('Wait for it...'):
+            time.sleep(5)
        st.info(output_text)
        st.session_state['key'].append({search: output_text})
        # st.write(f"Embeddings: {similarity(st.session_state['key'])}")
