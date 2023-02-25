@@ -236,12 +236,16 @@ class __login__:
         if st.session_state['LOGGED_IN'] == True:
             del_logout = st.sidebar.empty()
             del_logout2 = st.sidebar.empty()
+            del_logout3 = st.sidebar.empty()
+            del_logout4 = st.sidebar.empty()
 
             del_logout.markdown("#")
             
             if 'key' not in st.session_state:
                 st.session_state['key'] = [{f"{st.session_state['name']} 👤": "Le Chat 🐱"}]
             
+            del_logout3.markdown(f"### {st.session_state['name']}")
+            del_logout4.markdown("""---""")
             logout_click_check = del_logout.button(self.logout_button_name)
             with del_logout2.expander("About me"):
               st.write("Meow!")
@@ -265,6 +269,8 @@ class __login__:
                 self.cookies['__streamlit_login_signup_ui_username__'] = '1c9a923f-fb21-4a91-b3f3-5f18e3f01182'
                 del_logout.empty()
                 del_logout2.empty()
+                del_logout3.empty()
+                del_logout4.empty()
                 st.experimental_rerun()
         
 
