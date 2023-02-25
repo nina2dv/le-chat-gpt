@@ -29,6 +29,8 @@ co = cohere.Client(st.secrets['co'])
 
 def app():
     
+   st.markdown("""---""")
+    
    form = st.form(key='my_form')
    search = form.text_input(label='Have a chat with the cat')
    submit_button = form.form_submit_button(label='Enter')
