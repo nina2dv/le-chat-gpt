@@ -1,7 +1,6 @@
 import streamlit as st
 import json
 import os
-import time
 from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 from streamlit_cookies_manager import EncryptedCookieManager
@@ -239,13 +238,13 @@ class __login__:
             del_logout2 = st.sidebar.empty()
 
             del_logout.markdown("#")
-            time.sleep(0.5)
+
             if 'key' not in st.session_state:
-                st.session_state['key'] = [{f"{st.session_state['name']} 👤": "Le Chat 🐱"}]
+                st.session_state['key'] = [{"User 👤": "Le Chat 🐱"}]
             
             logout_click_check = del_logout.button(self.logout_button_name)
             with del_logout2:
-                st.markdown(f"# {st.session_state['name']}")
+                # st.markdown(f"# {st.session_state['name']}")
                 st.markdown("""---""")
                 with expander("About me"):
                   st.write("Meow!")
