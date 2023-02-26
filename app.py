@@ -23,7 +23,7 @@ if LOGGED_IN == True:
   # Streamlit Application
 
   # st.markdown(st.session_state)
-  st.info(f"##### Hello _{username}_", icon="👋")
+  st.info(f"##### Hello", icon="👋")
 
   # Applications
   app.add_app("Home", home.app)
